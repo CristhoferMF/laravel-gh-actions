@@ -4,5 +4,7 @@ jobs:
   composer-install:
     runs-on: ubuntu-latest
     steps:
+      - name: Checckout
+        uses: actions/checkout@v2
       - run: php -v
       - run: ls
