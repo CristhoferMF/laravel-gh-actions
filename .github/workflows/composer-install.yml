@@ -1,0 +1,11 @@
+name: Composer install
+on: [push]
+jobs:
+  composer-install:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run composer
+        uses: nick-zh/composer-php@master
+        with:
+          action: 'install -oa'
+      - run: composer -v
